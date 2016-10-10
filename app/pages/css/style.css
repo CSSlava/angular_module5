@@ -1,0 +1,29 @@
+.pokemonImg {
+    width: 150px;
+    padding-top: 10px;
+    margin: auto;
+    display: block;
+}
+
+.pokemonName {
+    text-align: center;
+    font-family: "Adobe Arabic";
+    font-size: 20px;
+}
+
+.pokemonCard {
+    float: left;
+    width: 33%;
+    height: 300px;
+}
+
+.pokemonLike {
+    font-size: 20px;
+    display: block;
+    text-decoration: none;
+}
+
+.checked {
+    color: red;
+}
+

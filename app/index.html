@@ -1,10 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="store">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>POKEDEX</title>
+
+    <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
+<header class="container header">
+    <div class="row">
+        <div class="row">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">POKEDEX</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<header class="container header">
+    <div class="row">
+        <div class="navbar" ng-controller="TabController as tabCtrl">
+            <ul class="nav nav-tabs">
+                <li ng-class="{active: tabCtrl.isSet(1)}">
+                    <a href="/#/all" ng-click="tabCtrl.setTab(1)">All pokemons</a>
+                </li>
+                <li ng-class="{active: tabCtrl.isSet(2)}">
+                    <a href="/#/liked" ng-click="tabCtrl.setTab(2)">Liked pokemons</a>
+                </li>
+            </ul>
+
+            <div>
+                <pokemon-list ng-show="tabCtrl.isSet(1)"></pokemon-list>
+                <pokemon-liked ng-show="tabCtrl.isSet(2)"></pokemon-liked>
+
+            </div>
+
+
+        </div>
+    </div>
+</header>
+
+<div ng-view></div>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+
+<script src="js/all.js"></script>
 </body>
 </html>

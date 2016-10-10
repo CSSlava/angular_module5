@@ -1,0 +1,45 @@
+<div class="col-md-4" ng-show="showInfo">
+    <div class="pokemonInfo">
+        <img class="pokemonImg col-md-4" ng-src="../../images/{{element.national_id}}.png">
+        <h4>{{element.name}}</h4>
+
+        <table class="">
+            <tr>
+                <th>Type</th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>Attack</td>
+                <td>{{element.attack}}</td>
+            </tr>
+            <tr>
+                <td>Defense</td>
+                <td>{{element.defense}}</td>
+            </tr>
+            <tr>
+                <td>HP</td>
+                <td>{{element.hp}}</td>
+            </tr>
+            <tr>
+                <td>SP Attack</td>
+                <td>{{element.sp_atk}}</td>
+            </tr>
+            <tr>
+                <td>SP Defence</td>
+                <td>{{element.sp_def}}</td>
+            </tr>
+            <tr>
+                <td>Speed</td>
+                <td>{{element.speed}}</td>
+            </tr>
+            <tr>
+                <td>Weight</td>
+                <td>{{element.weight}}</td>
+            </tr>
+            <tr>
+                <td>Total moves</td>
+                <td>{{element.moves.length}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

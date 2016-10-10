@@ -1,0 +1,24 @@
+{
+  "name": "angular-store",
+  "version": "0.0.0",
+  "description": "Store on AngularJS",
+  "repository": "https://github.com/testSocialAcademy/angular-store.git",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "http-server": "^0.9.0",
+    "gulp": "^3.9.1",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.3.0"
+  },
+  "scripts": {
+    "install": "bower install",
+    "postinstall": "gulp build",
+    "prestart": "npm install",
+
+    "start": "http-server -a localhost -p 8000 -c-1 ./app"
+  }
+}

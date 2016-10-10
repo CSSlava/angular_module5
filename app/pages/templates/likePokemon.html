@@ -1,0 +1,21 @@
+<div class="col-md-8">
+    <div class="pokemonCard" ng-repeat="pokemon in pokemonsl" ng-class="{'selected': check(pokemon.national_id)}">
+
+        <a href="" ng-click="setId(pokemon, pokemon.national_id)">
+            <img class="pokemonImg" ng-src="/../images/{{pokemon.national_id}}.png">
+        </a>
+
+        <h4 class="pokemonName">{{pokemon.name}}</h4>
+
+        <a class="btn pokemonLike" href="#" ng-click="delFromLs(pokemon)">
+            <div class="" ng-class="{'checked': checkLike(pokemon.national_id)}">&hearts;</div>
+        </a>
+
+    </div>
+</div>
+    <button class="btn btn-primary" ng-click="setVisInfo(true)">Load More</button>
+
+
+
+
+<pokemon-info></pokemon-info>
